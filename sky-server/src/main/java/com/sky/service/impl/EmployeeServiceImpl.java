@@ -17,11 +17,13 @@ import com.sky.exception.PasswordErrorException;
 import com.sky.mapper.EmployeeMapper;
 import com.sky.result.PageResult;
 import com.sky.service.EmployeeService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.lang.annotation.ElementType;
 import java.time.LocalDateTime;
 
 @Service
@@ -96,6 +98,20 @@ public class EmployeeServiceImpl implements EmployeeService {
         pageResult.setTotal(page.getTotal());
         pageResult.setRecords(page.getResult());
         return pageResult;
+    }
+
+    @Override
+    public void stopAndStart(Long id, Integer status) {
+//        Employee employee1 = new Employee();
+//        employee1.setId(id);
+//        employee1.setStatus(status);
+        //构建器写法
+        Employee employee = Employee.builder()
+                .id(id)
+                .status(status)
+                .build();
+
+        employeeMapper.update(employee);
     }
 
 }
