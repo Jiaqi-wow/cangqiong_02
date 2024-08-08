@@ -8,6 +8,6 @@ sky:
     password: 20230701
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-#    access-key-id: LTAI5tFGrgU2jZxpERS791Aj
-#    access-key-secret: reAkll6pzoRI9DRHk720OCkIWA1gNZ
+    access-key-id:
+    access-key-secret: 
     bucket-name: cangqiong20240808
