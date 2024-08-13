@@ -48,4 +48,6 @@ public interface CategoryService {
      * @return
      */
     List<Category> requryByType(Integer type);
+
+
 }

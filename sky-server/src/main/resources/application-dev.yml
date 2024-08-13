@@ -8,4 +8,13 @@ sky:
     password: 20230701
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id:
+    access-key-secret:
     bucket-name: cangqiong20240808
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  wechat:
+    appid:
+    secret:
